@@ -1,5 +1,7 @@
 from dotenv import load_dotenv
-from os import environ
+from datetime import datetime
+import time
+import os
 import tweepy
 
 
@@ -8,10 +10,10 @@ load_dotenv()
 
 client = tweepy.Client(
 
-        consumer_key=environ.get('API_KEY'),
-        consumer_secret=environ.get('API_SECRET'),
-        access_token=environ.get('ACCESS_TOKEN'),
-        access_token_secret=environ.get('ACCESS_TOKEN_SECRET')
+        consumer_key=os.environ.get('API_KEY'),
+        consumer_secret=os.environ.get('API_SECRET'),
+        access_token=os.environ.get('ACCESS_TOKEN'),
+        access_token_secret=os.environ.get('ACCESS_TOKEN_SECRET')
 )
 
 
